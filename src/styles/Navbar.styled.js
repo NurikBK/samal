@@ -7,8 +7,10 @@ export const NavbarContainer = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 700px) {
+    height: ${(props) => (props.extendNavbar ? '25vh' : '60px')};
+  }
 `;
-
 
 export const NavbarLinkContainer = styled.div`
   display: flex;
@@ -29,13 +31,12 @@ export const NavbarLink = styled.a`
 `;
 
 export const NavbarLinkExtended = styled.a`
-  color: #FFF;
+  color: #fff;
   font-family: 'FSElliot', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
-   
 `;
 
 export const Logo = styled.img`
@@ -62,7 +63,7 @@ export const NavbarExtendedContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  background-color: #E62E11;
+  background-color: #e62e11;
   width: 100%;
   padding: 20px;
 `;
