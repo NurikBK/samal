@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  height: ${(props) => (props.extendNavbar ? '25vh' : '60px')};
+  height: ${(props) => (props.extendNavbar ? '25vh' : '200px')};
   background-color: #fff;
   display: flex;
   flex-direction: column;
