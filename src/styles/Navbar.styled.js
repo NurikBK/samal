@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  height: ${(props) => (props.extendNavbar ? '500px' : '200px')};
+  height: ${(props) => (props.extendNavbar ? '400px' : '200px')};
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (max-width: 700px) {
-    height: ${(props) => (props.extendNavbar ? '500px' : '80px')};
+    height: ${(props) => (props.extendNavbar ? '400px' : '80px')};
   }
 `;
 
