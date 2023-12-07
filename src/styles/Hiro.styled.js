@@ -16,7 +16,7 @@ export const HiroImage = styled.div`
   width: 100%;
   height: 550px;
   background-image: url(${HeroImg});
-  background-size: cover; 
+  background-size: contain; 
   background-position: center; 
   background-repeat: no-repeat;
   @media (max-width: 768px) {
