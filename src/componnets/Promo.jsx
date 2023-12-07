@@ -12,23 +12,28 @@ import {
 } from '../styles/Promo.styled';
 import Icon from './icon';
 
+import bottlesImage from '../assets/bottels.png';
+import receiptImage from '../assets/receipt.png';
+import bottleImage from '../assets/2bottle.png';
+import hnyImage from '../assets/hny.png';
+
 const rules = [
   {
     title: 'Приобрети от 5 бутылок Samal Water',
-    url: 'src/assets/bottels.png',
+    url: bottlesImage,
   },
   {
     title: 'Зарегистрируй чек на нашем сайте',
-    url: 'src/assets/receipt.png',
+    url: receiptImage,
   },
   {
     title:
       'Сделать фото с водой Samal и выложить в инстаграм stories с отметкой нашей страницы @Samal_Water',
-    url: 'src/assets/2bottle.png',
+    url: bottleImage,
   },
   {
     title: 'Получай призы',
-    url: 'src/assets/hny.png',
+    url: hnyImage,
   },
 ];
 
