@@ -8,15 +8,13 @@ export const Container = styled.div`
   align-items: center;
   gap: 19px;
   padding-bottom: 65px;
-  
-
 `;
 
 export const HiroImage = styled.div`
   width: 100%;
   height: 550px;
   background-image: url(${HeroImg});
-  background-size: contain; 
+  background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
   @media (max-width: 768px) {
