@@ -8,7 +8,7 @@ export const NavbarContainer = styled.nav`
   flex-direction: column;
   align-items: center;
   @media (max-width: 700px) {
-    height: ${(props) => (props.extendNavbar ? '25vh' : '60px')};
+    height: ${(props) => (props.extendNavbar ? '25vh' : '80px')};
   }
 `;
 
