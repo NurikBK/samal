@@ -16,7 +16,7 @@ export const PrizeContainer = styled.div`
   & div > p {
     color: #fff;
     text-align: center;
-    font-family: 'FSElliot', sans-serif;
+    font-family: 'FS Elliot Pro', , sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
@@ -57,7 +57,7 @@ export const Title = styled.div`
   padding: 6px 51px;
   & > h2 {
     color: #f80703;
-    font-family: 'FSElliot', sans-serif;
+    font-family: 'FS Elliot Pro', , sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
@@ -87,7 +87,7 @@ export const SubTitle = styled.div`
   padding: 6px 76px;
   & > h2 {
     color: #f80703;
-    font-family: 'FSElliot', sans-serif;
+    font-family: 'FS Elliot Pro', , sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
@@ -120,11 +120,10 @@ export const Box = styled.div`
   align-items: start;
   flex-direction: column;
 
-
   & > span {
     color: #fff;
     text-align: center;
-    font-family: 'FSElliot', sans-serif;
+    font-family: 'FS Elliot Pro', , sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;

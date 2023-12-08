@@ -7,11 +7,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   @font-face {
-  font-family: 'FSElliot'; 
-  src: url('../assets/fonts/regular.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-  }
+    font-family: "FS Elliot Pro";
+    src: url("https://db.onlinewebfonts.com/t/8de7c45e410de3f3a0f5dbfec43f958d.eot");
+    src: url("https://db.onlinewebfonts.com/t/8de7c45e410de3f3a0f5dbfec43f958d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8de7c45e410de3f3a0f5dbfec43f958d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8de7c45e410de3f3a0f5dbfec43f958d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/8de7c45e410de3f3a0f5dbfec43f958d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8de7c45e410de3f3a0f5dbfec43f958d.svg#FS Elliot Pro")format("svg");
+}
 
   body {
     margin: 0 auto;
@@ -65,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     color: #E62E11;
     text-align: center;
-    font-family: 'FSElliot';
+    font-family: "FS Elliot Pro", ;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;

@@ -14,7 +14,7 @@ export const PromoContainer = styled.div`
   & div > p {
     color: #fff;
     text-align: center;
-    font-family: 'FSElliot', sans-serif;
+    font-family: 'FS Elliot Pro', , sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
@@ -28,7 +28,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-family: 'FSElliot', sans-serif;
+  font-family: 'FS Elliot Pro', , sans-serif;
   color: #000;
   font-size: 36px;
   font-style: normal;
@@ -53,7 +53,7 @@ export const SubTitle = styled.div`
   padding: 6px 76px;
   & > h2 {
     color: #f80703;
-    font-family: 'FSElliot', sans-serif;
+    font-family: 'FS Elliot Pro', , sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
@@ -81,7 +81,7 @@ export const Button = styled.button`
   padding: 17px 38px;
   color: #fff;
   text-align: center;
-  font-family: 'FSElliot';
+  font-family: 'FS Elliot Pro';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -107,7 +107,7 @@ export const PromoBox = styled.div`
   }
   & div > h3 {
     color: var(--gray-dark-blue-main, #000d1a);
-    font-family: 'FSElliot';
+    font-family: 'FS Elliot Pro';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -117,7 +117,7 @@ export const PromoBox = styled.div`
 
   & > p {
     color: var(--gray-70-secondary, #4d565f);
-    font-family: 'FSElliot';
+    font-family: 'FS Elliot Pro';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -125,12 +125,11 @@ export const PromoBox = styled.div`
   }
   @media (max-width: 768px) {
     & {
-  padding: 30px;
-
+      padding: 30px;
     }
     & div > h3 {
       color: var(--gray-dark-blue-main, #000d1a);
-      font-family: 'FSElliot';
+      font-family: 'FS Elliot Pro';
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -156,7 +155,7 @@ export const Card = styled.div`
 
 export const CardTitle = styled.h3`
   color: var(--gray-dark-blue-main, #000d1a);
-  font-family: 'FSElliot';
+  font-family: 'FS Elliot Pro';
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -174,7 +173,7 @@ export const RulesContainer = styled.div`
   margin-bottom: 56px;
   & div > p {
     color: #000;
-    font-family: 'FSElliot';
+    font-family: 'FS Elliot Pro';
     text-align: center;
     font-size: 20px;
     font-style: normal;
@@ -202,7 +201,7 @@ export const ImageContainer = styled.div`
   }
   & div > p {
     color: #000;
-    font-family: 'FSElliot';
+    font-family: 'FS Elliot Pro';
     text-align: center;
     font-size: 20px;
     font-style: normal;
