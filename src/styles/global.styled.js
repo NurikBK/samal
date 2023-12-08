@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Open-Sans, Helvetica, Sans-Serif;
     overflow: hidden;
     scroll-behavior: smooth;
+    max-width: 1366px;
   }
   #root {
     width: 100vw;
