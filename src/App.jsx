@@ -1,3 +1,4 @@
+import { Footer } from './componnets/Footer';
 import Hiro from './componnets/Hiro';
 import { MainSection } from './componnets/MainSection';
 import { Navbar } from './componnets/Navbar';
@@ -12,6 +13,7 @@ function App() {
       <Hiro />
       <MainSection/>
       <Promo />
+      <Footer />
     </>
   );
 }
