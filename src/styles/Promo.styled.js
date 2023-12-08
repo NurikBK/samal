@@ -20,7 +20,7 @@ export const PromoContainer = styled.div`
     font-weight: 700;
   }
 `;
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: #fff;
   width: 100%;
   height: 550px;
