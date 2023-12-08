@@ -23,7 +23,7 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLink = styled.a`
   color: #656565;
-  font-family: 'FS Elliot Pro', , sans-serif;
+  font-family: 'FS Elliot Pro', sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -32,7 +32,7 @@ export const NavbarLink = styled.a`
 
 export const NavbarLinkExtended = styled.a`
   color: #fff;
-  font-family: 'FS Elliot Pro', , sans-serif;
+  font-family: 'FS Elliot Pro', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
