@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     scroll-behavior: smooth;
     max-width: 1480px;
+    position: relative;
     & ::-webkit-scrollbar {
       display: none;
     }
