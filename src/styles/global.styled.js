@@ -22,12 +22,12 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     max-width: 1480px;
     & ::-webkit-scrollbar {
-  display: none;
-  & {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+      display: none;
     }
+    & {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+      }
   }
   #root {
     height: 100vh;
@@ -35,12 +35,12 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     scroll-behavior: smooth;
     & ::-webkit-scrollbar {
-  display: none;
-  & {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-}
+    display: none;
+    }
+    & {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    }
   }
   form {
     display: flex;
