@@ -14,19 +14,33 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background: #fff;
     font-family: Open-Sans, Helvetica, Sans-Serif;
     overflow: hidden;
     scroll-behavior: smooth;
-    max-width: 1366px;
+    max-width: 1480px;
+    & ::-webkit-scrollbar {
+  display: none;
+  & {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+    }
   }
   #root {
-    width: 100vw;
     height: 100vh;
+    width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    & ::-webkit-scrollbar {
+  display: none;
+  & {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+}
   }
   form {
     display: flex;
