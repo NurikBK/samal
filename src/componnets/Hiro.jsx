@@ -55,7 +55,7 @@ const Hiro = () => {
         <HiroTitle>Загружай чек</HiroTitle>
         <HiroSubTitle>Выигрывай крутые призы</HiroSubTitle>
         <CountdownBox>
-          <HiroSubTitle>До конца акции</HiroSubTitle>
+          <HiroSubTitle>До конца розыгрыша</HiroSubTitle>
           <HiroSubTitle>
             {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:
             {timeLeft.seconds}
