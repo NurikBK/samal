@@ -5,6 +5,7 @@ import {
   Card,
   CardTitle,
   Container,
+  DivContainer,
   ImageContainer,
   PromoBox,
   RulesContainer,
@@ -41,7 +42,7 @@ export const Promo = () => {
   const [formData, setFormData] = useState({
     full_name: '',
     phone_number: '',
-    Instagram_handle: '',
+    instagram_handle: '',
     file: null,
   });
 
@@ -96,31 +97,38 @@ export const Promo = () => {
     // setFormData({
     //   full_name: '',
     //   phone_number: '',
-    //   Instagram_handle: '',
+    //   instagram_handle: '',
     //   file: null,
     // });
   };
 
   const sendFormDataToBackend = async (data) => {
+    console.log(data);
+    const formData = new FormData();
+
+formData.append('full_name', 'qwert');
+formData.append('phone_number', '+7 (123) 456-78-23');
+formData.append('instagram_handle', '12345');
+formData.append('file', data.file, data.file.name, { type: data.file.type });
     try {
-      const response = await fetch('http://78.40.108.123:8000', {
+      const response = await fetch('http://78.40.108.123:8000/create_ticket/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'accept': 'application/json',
+          'Content-Type': 'multipart/form-data',
         },
-        body: JSON.stringify(data),
+        body: formData,
       });
 
       if (response.ok) {
         console.log('Data sent successfully');
-        // Handle success, e.g., show a success message to the user
+        
       } else {
         console.error('Failed to send data:', response.statusText);
-        // Handle failure, e.g., show an error message to the user
+      
       }
     } catch (error) {
       console.error('Error sending data:', error.message);
-      // Handle other errors, e.g., network issues
     }
   };
   return (
@@ -173,20 +181,14 @@ export const Promo = () => {
           />
           <input
             type="text"
-            name="Instagram_handle"
+            name="instagram_handle"
             placeholder="instagram"
-            value={formData.Instagram_handle}
+            value={formData.instagram_handle}
             onChange={handleChange}
             required
             />
             </div>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '16px',
-            }}
+          <DivContainer
           >
             <input type="checkbox" required />
             <span>
@@ -195,7 +197,7 @@ export const Promo = () => {
                 персональных данных
               </a>
             </span>
-          </div>
+          </DivContainer>
         <Card>
           <CardTitle>Загрузить фото чека</CardTitle>
           <PromoBox>
@@ -221,16 +223,9 @@ export const Promo = () => {
               </h3>
             </div>
             {formData.file && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '16px',
-                }}
-              >
+              <DivContainer >
                 <Icon fill="#000"/> <p style={{color: 'black', fontSize:"14px"}}>{formData.file.name}</p>
-              </div>
+              </DivContainer>
             )}
             <p>формат файла: jpeg, png до 10 мб.</p>
           </PromoBox>
