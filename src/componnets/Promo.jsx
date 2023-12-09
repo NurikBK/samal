@@ -57,7 +57,6 @@ export const Promo = () => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    console.log(typeof file);
 
     // Validate file type and size
     if (file && isValidFile(file)) {
@@ -103,7 +102,6 @@ export const Promo = () => {
   };
 
   const sendFormDataToBackend = async (data) => {
-    console.log(data);
     try {
       const response = await fetch('http://78.40.108.123:8000', {
         method: 'POST',
