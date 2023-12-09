@@ -208,3 +208,18 @@ export const ImageContainer = styled.div`
     font-weight: 400;
   }
 `;
+
+
+export const DivContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
+
+@media (max-width: 768px) {
+    & span, & a {
+      font-size: 12px;
+    }
+  }
+
+`
