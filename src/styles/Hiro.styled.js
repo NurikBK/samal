@@ -19,7 +19,7 @@ export const HiroImage = styled.div`
   background-repeat: no-repeat;
   @media (max-width: 768px) {
     & {
-      background-size: contain;
+      background-size: cover;
       height: 150px;
     }
   }
