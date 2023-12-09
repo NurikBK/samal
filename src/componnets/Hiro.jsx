@@ -12,7 +12,7 @@ const Hiro = () => {
 
   const calculateTimeLeft = () => {
     const now = new Date();
-    const newYear = new Date(now.getFullYear() + 1, 0, 1);
+    const newYear = new Date(now.getFullYear() + 1, 0, 15);
     const timeDifference = newYear - now;
 
     if (timeDifference > 0) {
@@ -55,7 +55,7 @@ const Hiro = () => {
         <HiroTitle>Загружай чек</HiroTitle>
         <HiroSubTitle>Выигрывай крутые призы</HiroSubTitle>
         <CountdownBox>
-          <HiroSubTitle>До Нового Года</HiroSubTitle>
+          <HiroSubTitle>До конца акции</HiroSubTitle>
           <HiroSubTitle>
             {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:
             {timeLeft.seconds}

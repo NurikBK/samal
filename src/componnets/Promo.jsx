@@ -39,10 +39,10 @@ const rules = [
 
 export const Promo = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    phoneNumber: '',
-    instagram: '',
-    selectedFile: null,
+    full_name: '',
+    phone_number: '',
+    Instagram_handle: '',
+    file: null,
   });
 
   const fileInputRef = useRef(null);
@@ -57,12 +57,13 @@ export const Promo = () => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+    console.log(typeof file);
 
     // Validate file type and size
     if (file && isValidFile(file)) {
       setFormData({
         ...formData,
-        selectedFile: file,
+        file: file,
       });
     } else {
       // Clear the file input if the file is invalid
@@ -72,16 +73,16 @@ export const Promo = () => {
 
   const isValidFile = (file) => {
     // Check file type
-    const allowedTypes = ['image/jpeg', 'image/png'];
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
     if (!allowedTypes.includes(file.type)) {
-      alert('Only JPEG and PNG files are allowed.');
+      alert('Только jpeg, png форматы');
       return false;
     }
 
     // Check file size (10MB)
     const maxSize = 10 * 1024 * 1024; // 10MB in bytes
     if (file.size > maxSize) {
-      alert('File size must be less than 10MB.');
+      alert('Файл больше 10 мб');
       return false;
     }
 
@@ -93,32 +94,58 @@ export const Promo = () => {
 
     sendFormDataToBackend(formData);
 
-    setFormData({
-      fullName: '',
-      phoneNumber: '',
-      instagram: '',
-      selectedFile: null,
-    });
+    // setFormData({
+    //   full_name: '',
+    //   phone_number: '',
+    //   Instagram_handle: '',
+    //   file: null,
+    // });
   };
 
-  const sendFormDataToBackend = (data) => {
-    console.log('Sending data to backend:', data);
+  const sendFormDataToBackend = async (data) => {
+    console.log(data);
+    try {
+      const response = await fetch('http://78.40.108.123:8000', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Data sent successfully');
+        // Handle success, e.g., show a success message to the user
+      } else {
+        console.error('Failed to send data:', response.statusText);
+        // Handle failure, e.g., show an error message to the user
+      }
+    } catch (error) {
+      console.error('Error sending data:', error.message);
+      // Handle other errors, e.g., network issues
+    }
   };
   return (
-    <Container id='rules'>
+    <Container id="rules">
       <Title>Как принять участие в Промо</Title>
       <RulesContainer>
         <ImageContainer>
           {rules.map((rule, index) => (
             <div key={index}>
-              <img src={rule.url} alt={rule.title} style={{borderRadius: '8px'}}/>
+              <img
+                src={rule.url}
+                alt={rule.title}
+                style={{ borderRadius: '8px' }}
+              />
               <p>{rule.title}</p>
             </div>
           ))}
         </ImageContainer>
-        <Button as={'a'} href='#check'>Зарегестрировать чек</Button>
+        <Button as={'a'} href="#check">
+          Зарегестрировать чек
+        </Button>
       </RulesContainer>
-      <Title id='check'>
+      <Title id="check">
         Регистрируй свой чек и участвуй в еженедельном розыгрыше призов
       </Title>
       <p>
@@ -130,39 +157,59 @@ export const Promo = () => {
         <div>
           <input
             type="text"
-            name="fullName"
+            name="full_name"
             placeholder="ФИО"
-            value={formData.fullName}
+            value={formData.full_name}
             onChange={handleChange}
+            required
           />
           <InputMask
             mask="+7 (999) 999-99-99"
             maskChar="_"
             type="tel"
-            name="phoneNumber"
+            name="phone_number"
             placeholder="Номер телефона"
-            value={formData.phoneNumber}
+            value={formData.phone_number}
             onChange={handleChange}
+            required
           />
           <input
             type="text"
-            name="instagram"
-            placeholder="Instagram"
-            value={formData.instagram}
+            name="Instagram_handle"
+            placeholder="instagram"
+            value={formData.Instagram_handle}
             onChange={handleChange}
-          />
-        </div>
+            required
+            />
+            </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '16px',
+            }}
+          >
+            <input type="checkbox" required />
+            <span>
+              Даю согласие на сбор и обработку{' '}
+              <a href="https://docs.google.com/document/d/1eNZt9_9Ts6IsbifPgvMFyiHS-tpivJqu27sIoK0Al10/edit#heading=h.9v13mydxs1c0">
+                персональных данных
+              </a>
+            </span>
+          </div>
         <Card>
           <CardTitle>Загрузить фото чека</CardTitle>
           <PromoBox>
             <div>
               <input
                 type="file"
-                name="selectedFile"
+                name="file"
                 accept=".jpg, .jpeg, .png"
                 onChange={handleFileChange}
                 ref={fileInputRef}
                 style={{ display: 'none' }}
+                required
               />
               <Button
                 type="button"
@@ -175,6 +222,18 @@ export const Promo = () => {
                 файл с устройства
               </h3>
             </div>
+            {formData.file && (
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '16px',
+                }}
+              >
+                <Icon fill="#000"/> <p style={{color: 'black', fontSize:"14px"}}>{formData.file.name}</p>
+              </div>
+            )}
             <p>формат файла: jpeg, png до 10 мб.</p>
           </PromoBox>
         </Card>
